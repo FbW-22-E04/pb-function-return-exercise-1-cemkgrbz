@@ -16,16 +16,16 @@ console.log(uppercase("the quick brown fox"));
 // Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
 function find_longest_word(str) {
   let strSplit = str.split(' ');
-  let longestWord = [];
+  let longestWord = ""
 
   for(let i = 0; i < strSplit.length; i++){
-    if(strSplit[i].length > longestWord){
-	longestWord = strSplit[i].length;
+    if(strSplit[i].length > longestWord.length){
+	longestWord = strSplit[i];
      }
   }
   return longestWord;
 }
-  //write your code here 
+
 
 console.log(find_longest_word("Web Development Tutorial"));
 
@@ -33,7 +33,14 @@ console.log(find_longest_word("Web Development Tutorial"));
 // 3
 // Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
 function Longest_Country_Name(country_name) {
-  //write your code here 
+
+  let longestCountry = "";
+  for (let i = 0; i < country_name.length; i++) {
+    if (country_name[i].length > longestCountry.length) {
+      longestCountry = country_name[i];
+    }
+  }
+  return longestCountry;
 }
 
 console.log(
