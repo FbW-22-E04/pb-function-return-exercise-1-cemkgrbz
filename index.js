@@ -1,7 +1,13 @@
 //Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
 // 1
 function uppercase(str) {
-  //write your code here 
+  let array1 = str.split(' ');
+  let newArray = [];
+    
+  for(let x = 0; x < array1.length; x++){
+      newArray.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newArray.join(' ');
 }
 
 console.log(uppercase("the quick brown fox"));
@@ -9,9 +15,20 @@ console.log(uppercase("the quick brown fox"));
 // 2
 // Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
 function find_longest_word(str) {
-  //write your code here 
+  let strSplit = str.split(' ');
+  let longestWord = [];
+
+  for(let i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > longestWord){
+	longestWord = strSplit[i].length;
+     }
+  }
+  return longestWord;
 }
+  //write your code here 
+
 console.log(find_longest_word("Web Development Tutorial"));
+
 
 // 3
 // Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
